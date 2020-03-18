@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/llContainer">
+
+            <TextView
+                android:id="@+id/tvLocalization"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID"
+                android:textSize="16sp"
+                android:padding="8dp"
+                android:layout_margin="8dp"
+                android:drawableStart="@drawable/ic_language"
+                android:drawablePadding="8dp"
+                android:textColor="@color/white"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/big_rounded_white_bg"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iconWhatsapp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_whatsapp" />
+
+        </RelativeLayout>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/big_rounded_bottom"
+            android:orientation="vertical"
+            android:paddingHorizontal="28dp"
+            android:paddingVertical="36dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/negara"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCountryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:drawableEnd="@drawable/ic_arrow_drop"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingVertical="8dp"
+                tools:text="INDONESIA"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/nomor_telepon"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tvCountryCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight=".7"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableEnd="@drawable/ic_arrow_drop"
+                    tools:text="+62"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/etNumberPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight=".3"
+                    android:fontFamily="@font/nunito"
+                    android:hint="@string/masukkan_nomor_telepon"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    tools:ignore="TextFields" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStartChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="48dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="@font/nunito"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="16dp"
+                android:text="@string/mulai_chat"
+                app:cornerRadius="15dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
+</layout>

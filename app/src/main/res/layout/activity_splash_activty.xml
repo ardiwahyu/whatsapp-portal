@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.splash_activity.SplashActivity"
+        android:gravity="center"
+        android:background="@color/colorPrimary">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconWhatsapp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/icon_whatsapp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iconWhatsapp"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="16dp"/>
+
+    </RelativeLayout>
+</layout>

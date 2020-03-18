@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">WhatsApp Portal</string>
+    <string name="imageflag">ImageFlag</string>
+    <string name="negara">Negara</string>
+    <string name="nomor_telepon">Nomor Telepon</string>
+    <string name="masukkan_nomor_telepon">Masukkan nomor telepon</string>
+    <string name="mulai_chat">Mulai chat</string>
+    <string name="pilih_bahasa" tools:ignore="TypographyEllipsis">Pilih bahasa...</string>
+    <string name="bahasa_indonesia" translatable="false">Bahasa Indonesia</string>
+    <string name="english" translatable="false">English</string>
+    <string name="pilih_negara" tools:ignore="TypographyEllipsis">Pilih negara...</string>
+    <string name="peringatan_nomor_kosong">Masukkan nomor telepon</string>
+    <string name="peringatan_wa">WhatsApp tidak terinstal</string>
+    <string name="nama_negara">Nama negara</string>
+</resources>

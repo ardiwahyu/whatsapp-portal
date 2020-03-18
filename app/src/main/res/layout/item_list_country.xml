@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="country"
+            type="com.gitlab.whatsappportal.data.db.vo.CountryVo" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="?attr/selectableItemBackground"
+        android:weightSum="1"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:src="@color/colorAccent"
+            app:imageUrl="@{country.flag}"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/imageflag" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:id="@+id/tvCountryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{country.name}"
+                tools:text="Nama Negara"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvCountryCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:setCode="@{country.callingCode}"
+                tools:text="+62"
+                android:layout_marginTop="8dp"
+                android:textSize="12sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

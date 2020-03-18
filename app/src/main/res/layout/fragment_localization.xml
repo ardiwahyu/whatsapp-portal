@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FAFAFA">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pilih_bahasa"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llIndonesia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/indonesia"
+                    android:contentDescription="@string/bahasa_indonesia" />
+
+                <TextView
+                    android:id="@+id/tvIndonesia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bahasa_indonesia"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center_vertical" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llEnglish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/english"
+                    android:contentDescription="@string/english" />
+
+                <TextView
+                    android:id="@+id/tvEnglish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/english"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center_vertical" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
+</layout>
