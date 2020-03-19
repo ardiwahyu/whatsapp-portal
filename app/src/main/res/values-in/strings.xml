@@ -11,4 +11,5 @@
     <string name="peringatan_nomor_kosong">Masukkan nomor telepon</string>
     <string name="peringatan_wa">WhatsApp tidak terinstal</string>
     <string name="nama_negara">Nama negara</string>
+    <string name="by">Created by:\nWAHYU ARDIANSYAH</string>
 </resources>

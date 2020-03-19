@@ -2,6 +2,7 @@ package com.gitlab.whatsappportal.data.sp
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.os.Build
 import java.util.*
 import javax.inject.Inject
 
@@ -12,9 +13,18 @@ class StatusManager @Inject constructor(context: Context) {
         const val LANGUAGE_KEY = "language"
         const val COUNTRY_KEY = "country"
         const val CODE_KEY = "code"
+        const val VERSION_KEY = "version"
     }
 
     private var sp: SharedPreferences = context.getSharedPreferences(SP_NAME, Context.MODE_PRIVATE)
+
+    fun storeVersion(string: String){
+        sp.edit().putString(VERSION_KEY, string).apply()
+    }
+
+    fun getVersion(): String{
+        return sp.getString(VERSION_KEY, "1").toString()
+    }
 
     fun storeStatus(boolean: Boolean){
         sp.edit().putBoolean(STATUS_KEY, boolean).apply()

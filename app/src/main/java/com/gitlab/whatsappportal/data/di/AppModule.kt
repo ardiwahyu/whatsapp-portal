@@ -40,9 +40,10 @@ class AppModule {
             .addInterceptor(interceptor)
             .build()
         val gson = GsonBuilder().create()
+//      .baseUrl("https://restcountries.eu/rest/v2/")
         return Retrofit.Builder()
             .client(client)
-            .baseUrl("https://restcountries.eu/rest/v2/")
+            .baseUrl("https://olsox.000webhostapp.com/")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build().create(RequestService::class.java)
     }

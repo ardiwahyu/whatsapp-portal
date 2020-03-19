@@ -7,6 +7,7 @@ import com.gitlab.whatsappportal.data.Status
 import com.gitlab.whatsappportal.data.db.dao.CountryDao
 import com.gitlab.whatsappportal.data.db.vo.CountryVo
 import com.gitlab.whatsappportal.data.network.RequestService
+import com.gitlab.whatsappportal.data.network.model.Version
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.lang.Exception
@@ -53,6 +54,19 @@ class Repository @Inject constructor(
         return withContext(Dispatchers.IO){
             val cache = countryDao.getByName(string)
             return@withContext Resource(Status.SUCCESS, cache, "")
+        }
+    }
+
+    suspend fun getVersion(): Resource<Version>{
+        return withContext(Dispatchers.IO) {
+            val versionResponse = requestService.getVersion()
+            if (versionResponse.isSuccessful) {
+                val version = versionResponse.body()
+                return@withContext Resource(Status.SUCCESS, version, "")
+            } else {
+                val message = versionResponse.errorBody().toString()
+                throw Exception(message)
+            }
         }
     }
 }

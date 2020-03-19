@@ -11,4 +11,5 @@
     <string name="peringatan_nomor_kosong">Please enter telephone number</string>
     <string name="peringatan_wa">WhatsApp not installed</string>
     <string name="nama_negara">Name of country</string>
+    <string name="by">Created by:\nWAHYU ARDIANSYAH</string>
 </resources>

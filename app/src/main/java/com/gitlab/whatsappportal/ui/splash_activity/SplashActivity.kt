@@ -13,7 +13,10 @@ import com.gitlab.whatsappportal.data.sp.StatusManager
 import com.gitlab.whatsappportal.databinding.ActivitySplashActivtyBinding
 import com.gitlab.whatsappportal.ui.main_activity.MainActivity
 import dagger.android.support.DaggerAppCompatActivity
+import org.jetbrains.anko.alert
 import org.jetbrains.anko.intentFor
+import org.jetbrains.anko.okButton
+import timber.log.Timber
 import javax.inject.Inject
 
 class SplashActivity : DaggerAppCompatActivity() {
@@ -36,22 +39,37 @@ class SplashActivity : DaggerAppCompatActivity() {
     }
 
     private fun initComponent(){
+        viewModel.getVersion()
+        viewModel.version.observe(this, Observer {
+            Timber.d("versnya "+it.data?.version)
+            if (it.data?.version == statusManager.getVersion()){
+                downloadData()
+            }else{
+                alert("Anda tidak diijinkan menggunakan aplikasi ini, silahkan hubungi developer", "Error") {
+                    isCancelable = false
+                    positiveButton("EXIT"){finish()}
+                }.show()
+            }
+        })
+    }
+
+    private fun downloadData(){
         val isOld = statusManager.getStatus()
         if (!isOld){
             viewModel.getCountry(true).observe(this, Observer {
-                statusManager.storeStatus(true)
                 if (it.status == Status.SUCCESS) {
-                    Handler().postDelayed({
-                        startActivity(intentFor<MainActivity>())
-                        finish()
-                    }, 1500)
+                    statusManager.storeStatus(true)
+                    startActivity(intentFor<MainActivity>())
+                    finish()
+                }else{
+                    alert ("Download data error, cobalah beberapa saat lagi", "Error"){
+                        okButton { finish() }
+                    }
                 }
             })
         }else{
-            Handler().postDelayed({
-                startActivity(intentFor<MainActivity>())
-                finish()
-            }, 3000)
+            startActivity(intentFor<MainActivity>())
+            finish()
         }
     }
 }
