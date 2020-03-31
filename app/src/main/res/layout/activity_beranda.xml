@@ -23,21 +23,24 @@
                 android:id="@+id/tvLocalization"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ID"
+                tools:text="ID"
                 android:textSize="16sp"
-                android:padding="8dp"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="10dp"
                 android:layout_margin="8dp"
                 android:drawableStart="@drawable/ic_language"
                 android:drawablePadding="8dp"
                 android:textColor="@color/white"
                 android:layout_alignParentEnd="true"
-                android:background="@drawable/big_rounded_white_bg"/>
+                android:background="@drawable/big_rounded_white_bg"
+                tools:ignore="RelativeOverlap" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/iconWhatsapp"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:layout_centerInParent="true"
+                android:transitionName="image_logo"
                 android:src="@drawable/icon_whatsapp" />
 
         </RelativeLayout>

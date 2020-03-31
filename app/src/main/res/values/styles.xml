@@ -8,7 +8,6 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textViewStyle">@style/NunitoTextViewStyle</item>
         <item name="android:buttonStyle">@style/NunitoButtonStyle</item>
-        <item name="android:windowActivityTransitions">true</item>
         <item name="android:windowContentTransitions">true</item>
     </style>
 
@@ -19,8 +18,8 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textViewStyle">@style/NunitoTextViewStyle</item>
         <item name="android:buttonStyle">@style/NunitoButtonStyle</item>
-        <item name="android:windowActivityTransitions">true</item>
         <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActivityTransitions">false</item>
     </style>
 
     <style name="NunitoTextViewStyle" parent="android:Widget.TextView">

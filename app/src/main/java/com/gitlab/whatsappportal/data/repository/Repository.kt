@@ -44,7 +44,7 @@ class Repository @Inject constructor(
                     saveCallCountry()
                     emit(Resource.success(countryDao.getAll()))
                 }catch (e: Exception){
-                    print(e.message)
+                    emit(Resource.error(null,"Download Data Error"))
                 }
             }
         }
