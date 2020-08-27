@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <data>
-    </data>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +36,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/indonesia"
+                    android:src="@mipmap/indonesia"
                     android:contentDescription="@string/bahasa_indonesia" />
 
                 <TextView
@@ -63,7 +60,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/english"
+                    android:src="@mipmap/english"
                     android:contentDescription="@string/english" />
 
                 <TextView

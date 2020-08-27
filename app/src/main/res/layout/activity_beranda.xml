@@ -3,10 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,23 +24,23 @@
                 android:paddingVertical="8dp"
                 android:paddingHorizontal="10dp"
                 android:layout_margin="8dp"
-                android:drawableStart="@drawable/ic_language"
                 android:drawablePadding="8dp"
                 android:textColor="@color/white"
                 android:layout_alignParentEnd="true"
                 android:background="@drawable/big_rounded_white_bg"
-                tools:ignore="RelativeOverlap" />
+                tools:ignore="RelativeOverlap"
+                app:drawableStartCompat="@drawable/ic_language" />
 
-            <androidx.appcompat.widget.AppCompatImageView
+            <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/iconWhatsapp"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:layout_centerInParent="true"
                 android:transitionName="image_logo"
-                android:src="@drawable/icon_whatsapp" />
-
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/icon"/>
         </RelativeLayout>
-
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/llContainer"
@@ -81,7 +77,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?attr/selectableItemBackground"
-                android:drawableEnd="@drawable/ic_arrow_drop"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:paddingVertical="8dp"
@@ -90,7 +85,8 @@
                 android:textAllCaps="true"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:drawableEndCompat="@drawable/ic_arrow_drop" />
 
             <View
                 android:layout_width="match_parent"
@@ -121,10 +117,10 @@
                     android:layout_marginEnd="8dp"
                     android:layout_weight=".7"
                     android:background="?attr/selectableItemBackground"
-                    android:drawableEnd="@drawable/ic_arrow_drop"
                     tools:text="+62"
                     android:textAlignment="center"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    app:drawableEndCompat="@drawable/ic_arrow_drop" />
 
                 <EditText
                     android:id="@+id/etNumberPhone"
@@ -150,6 +146,7 @@
                 android:paddingHorizontal="30dp"
                 android:paddingVertical="16dp"
                 android:text="@string/mulai_chat"
+                android:textColor="@color/white"
                 app:cornerRadius="15dp" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </RelativeLayout>
