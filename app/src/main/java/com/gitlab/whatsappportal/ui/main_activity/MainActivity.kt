@@ -27,13 +27,13 @@ import javax.inject.Inject
 
 class MainActivity : DaggerAppCompatActivity(), View.OnClickListener {
     companion object {
-        val REQUEST_CODE = 1
+        const val REQUEST_CODE = 1
     }
 
-    lateinit var binding: ActivityBerandaBinding
+    private lateinit var binding: ActivityBerandaBinding
     @Inject
     lateinit var statusManager: StatusManager
-    lateinit var local: String
+    private lateinit var local: String
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,6 +47,7 @@ class MainActivity : DaggerAppCompatActivity(), View.OnClickListener {
         initComponent()
     }
 
+    @SuppressLint("SetTextI18n")
     private fun initComponent() {
         val fromBottom = AnimationUtils.loadAnimation(this, R.anim.from_bottom)
         binding.llContainer.startAnimation(fromBottom)
