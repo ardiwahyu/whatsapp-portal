@@ -3,35 +3,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.splash_activity.SplashActivity"
+        tools:context=".ui.splashscreen.SplashActivity"
         android:background="@color/colorPrimary">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center"
-            android:layout_centerInParent="true">
+            android:gravity="center_horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/iconWhatsapp"
+                android:id="@+id/icon_whatsapp"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
-                android:layout_centerVertical="true"
                 app:lottie_autoPlay="true"
                 app:lottie_loop="true"
                 app:lottie_rawRes="@raw/icon"
-                android:transitionName="image_logo"
-                android:layout_centerHorizontal="true"/>
+                android:transitionName="image_logo"/>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/app_name"
-                android:textAlignment="center"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
@@ -39,23 +39,28 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <ProgressBar
-            android:id="@+id/pgDownload"
+            android:id="@+id/pg_download"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_above="@id/tvDeveloperName"
+            app:layout_constraintBottom_toTopOf="@id/tv_developer_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:visibility="visible"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="24dp"
             android:visibility="gone"/>
 
         <TextView
-            android:id="@+id/tvDeveloperName"
-            android:layout_width="match_parent"
+            android:id="@+id/tv_developer_name"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/by"
             android:textAlignment="center"
-            android:layout_alignParentBottom="true"
             android:textColor="@color/white"
             android:textSize="12sp"
-            android:layout_marginBottom="8dp"/>
-    </RelativeLayout>
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

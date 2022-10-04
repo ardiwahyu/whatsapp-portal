@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="16dp"
-            android:background="@drawable/big_rounded_bottom"
+            android:background="@drawable/bg_white_top_rounded"
             android:orientation="vertical"
             android:paddingHorizontal="28dp"
             android:paddingVertical="36dp">
@@ -80,13 +80,13 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:paddingVertical="8dp"
-                tools:text="INDONESIA"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:drawableEndCompat="@drawable/ic_arrow_drop" />
+                app:drawableEndCompat="@drawable/ic_arrow_drop"
+                tools:text="INDONESIA" />
 
             <View
                 android:layout_width="match_parent"
@@ -117,10 +117,10 @@
                     android:layout_marginEnd="8dp"
                     android:layout_weight=".7"
                     android:background="?attr/selectableItemBackground"
-                    tools:text="+62"
                     android:textAlignment="center"
                     android:textColor="@color/black"
-                    app:drawableEndCompat="@drawable/ic_arrow_drop" />
+                    app:drawableEndCompat="@drawable/ic_arrow_drop"
+                    tools:text="+62" />
 
                 <EditText
                     android:id="@+id/etNumberPhone"
