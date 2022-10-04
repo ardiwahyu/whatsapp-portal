@@ -13,4 +13,6 @@
     <string name="peringatan_wa">WhatsApp tidak terinstal</string>
     <string name="nama_negara">Nama negara</string>
     <string name="by">Created by:\nWAHYU ARDIANSYAH</string>
+    <string name="id" translatable="false">in</string>
+    <string name="en" translatable="false">en</string>
 </resources>
